@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<div align="center">
+  <p>
+    <img src="assets/logo_bcw.png" width="250" />
+  </p>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Take Home Test (Full Stack)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This is a take-home test for candidates applying for a full-stack developer
+position at BCW Technologies. It contains three sections: "Frontend" and "Backend" which
+together include a series of tests involving React, Typescript, and Node.js.
 
-### `npm start`
+Feel free to solve these questions however you see fit, using whatever coding
+style or third-party libraries you think are appropriate.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To start the test, simply clone this repo and make your edits locally. Once you are done, please push your changes to this repo and create a pull request.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+NOTE: We expect more than one commit in the PR, do not spend time overthinking the commit messages or squashing your commits together.
 
-### `npm test`
+1. Fetch and display the list of cryptocurrencies available from CoinStats (see endpoint below).
+2. **Create a responsive layout** that will display these currencies and their respective image, URLs, and data.
+3. Add a dropdown menu to fetch the list in one of the following currencies: HKD, KRW, SGD, and USD.
+4. Add a button to sort the list of currencies by the rank of the currencies.
+5. Add a button to sort the list of currencies by alphabetical order using the name of the currencies.
+6. Add a field to display the exchange a user should use to minimize the amount of a _selected currency_ they would need to spend on a trade 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    6a. _selected currency_ is the currency the user has selected in #3.
 
-### `npm run build`
+    6b. The correct exchange(s) should be returned by the backend server you are tasked to create below.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tips
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Please make the app be served on port `:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Please use React-Typescript for this task**, but feel free to structure the code however you prefer and use any other third-party libraries at your discretion. 
 
-### `npm run eject`
+- Do not spend too much time making it beautiful. Basic aesthetics are expected, please try to balance your time between function and aesthetics.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### API Information
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **CoinStats Public API `GET /public/v1/coins` endpoint:** 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    - https://dev-brand.api.vaultik.com/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Parameters:**
 
-## Learn More
+    - `currency`: `string` - one of `HKD`, `KRW`, `SGD`, and `USD`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Example:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    - `curl --location --request GET 'https://dev-brand.api.vaultik.com/product?pubKey=75cfc28c-e623-4cc4-a8bb-b6a27724aa3a'`
 
-### Code Splitting
+## Submitting Your Code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Once you've completed the test, please send a pull request to the same repository.
 
-### Analyzing the Bundle Size
+**Do not include node_modules or .git in your submission.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+We will then review it and get back to you as soon as possible.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks!
