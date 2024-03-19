@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <img src="assets/logo_bcw.png" width="250" />
+    <img src="public/logo_bcw.png" width="250" />
   </p>
 </div>
 
